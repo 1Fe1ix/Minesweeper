@@ -1,0 +1,171 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+html, body{
+height: 100%;
+}
+
+/*definition of special colors for each field of app*/
+:root {
+--title-color: #B13BDB;
+--playfield-color: #4A3CDB;
+--fields-color: #3B93DB';
+--button-color: #7D3BDB;
+--footer-color: #B13BDB;
+--border-size: 2px;
+--shadow-fields: black;
+--light-fields: white;
+}
+
+.container{
+/*the settings define ratio of the div compared to the screen size */
+/*if viewport (vw) is bigger than 50% of viewport height (50vh) the width will be 100vw*/
+/*if vw is smaller than half of vh the width (vw) will 50vh*/
+width: min(100vw, 50vh);
+height:min(100vh, 200vw);
+background-color: orange;   
+}
+
+.title{
+
+    width: min(100vw, 50vh);
+    height: 20%;
+    background-color: var(--title-color);    
+    text-align: center;
+    position: relative;
+}
+
+.boat{
+    background-image: url('images/images.jpg');
+    background-size: cover; 
+}
+
+h1{
+    font-size: xxl;
+    color: var(--title-color);
+    position: absolute;
+}
+p{
+    font-size: medium;
+    color: var(--title-color);
+    position: absolute;
+}
+
+.playfield{
+    /*flexible size*/
+    display: flex;
+    /*center in horizontal*/
+    align-items: center;
+    /*center in vertical*/
+    justify-content: space-around;
+    /*order of cubes in square shape*/
+    flex-wrap: wrap;
+    width: 100%;
+    /*padding-top puts the hight of playfield in dependency to the with of playfield */
+    /*warum padding nicht nötig?*/
+    background-color: lightgrey;    
+}
+
+.fields{
+    /*display: flex;*/
+    width: 11%;
+    padding-top: 11%;
+    color: var(--fields-color);
+    box-sizing: border-box;
+    border: black solid;
+    border-width: 1px;
+}
+
+
+/*signs in box*/
+.symbol{
+    background-image: url('images/symbols.svg');
+    background-size: cover;
+}
+
+.symbolOne{
+background-position: 0%;
+}
+
+.symbolTwo{
+    background-position: 11%;
+}
+
+.symbolThree{
+    background-position: 22%;
+}
+
+.symbolFour{
+    background-position: 33%;
+}
+
+.symbolFive{
+    background-position: 44%;
+}
+
+.symbolSix{
+    background-position: 55%;
+}
+
+.symbolSeven{
+    background-position: 66%;
+}
+
+.symbolEight{
+    background-position: 77%;
+}
+
+.symbolFlag{
+    background-position: 88%;
+}
+
+.symbolBomb{
+    background-position: 100%;
+}
+
+.covered{
+    border-top: white solid;
+    border-left: white solid;
+    border-right: black solid;
+    border-bottom: black solid;
+    background-color: lightgrey;  
+    /*border-radius: 5px;*/
+    border-width: 3px;
+}
+
+
+.buttonArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 20%;
+    background-color: darkgrey;    
+}
+
+/*button design*/
+.buttons{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 30%;
+    font-size: large;
+    border-radius: 15px;
+    border-width: 1px;
+}
+
+.footer{
+    width: min(100vw, 50vh);
+    height: 10%;
+    background-color: darkblue; 
+    /*makes div in footer boarder relative for bottomLeft to put text in position*/
+    position: relative; 
+}
+
+.bottomLeft{
+    position: absolute;
+    align-items: center;
+    font-size: small;
+}
+
